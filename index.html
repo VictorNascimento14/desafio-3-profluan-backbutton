@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Voltar ao Topo</title>
+    <style>
+        body {
+            min-height: 2000px;
+            font-family: Arial, sans-serif;
+        }
+        #backToTop {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+        #backToTop:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Botão Voltar ao Topo</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Role para baixo para ver o botão "Voltar ao Topo".</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, aut architecto! Debitis repellendus exercitationem minus officiis, velit id, illum accusantium ab deleniti perferendis quo sit cupiditate? Quia necessitatibus quam numquam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi quibusdam aliquid odio pariatur quasi quis vero doloribus, natus dicta dolorem sequi repellendus eveniet modi soluta ut perferendis deleniti mollitia repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos esse cum magnam fugit placeat ex libero mollitia laboriosam iste deserunt hic repellendus doloremque totam, atque accusamus iusto pariatur dolorem dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eum expedita amet nostrum fugit aliquid veritatis excepturi odit nisi quasi labore ea mollitia, provident et, itaque blanditiis doloremque iste. Repellat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, id accusantium cumque, nihil magni accusamus eum dolorem unde quidem ipsa rerum aut nesciunt inventore in, dolorum facere eveniet doloribus voluptate? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi autem hic, quasi dicta quos, in laudantium, harum sint libero numquam quibusdam nobis excepturi perferendis voluptate dolores nemo saepe temporibus blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime illum, consequuntur quis deserunt odit iste dolorum quibusdam voluptate laudantium, sed quaerat excepturi at consequatur magni aspernatur sint laborum qui sequi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam porro iure voluptatibus nam officia cum quae impedit. Itaque molestias voluptate fugiat molestiae, tempore animi, natus dolorem quibusdam, soluta culpa dignissimos?</p>
+
+
+    <button id="backToTop" title="Voltar ao topo">↑</button>
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.onscroll = function() {
+            if (window.scrollY > 300) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
+        btn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>
